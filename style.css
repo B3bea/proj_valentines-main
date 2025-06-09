@@ -1,0 +1,134 @@
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background-color: #312d28;
+      color: #dcd9d8;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #a8a6a3;
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1em;
+      color: #dcd9d8;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+
+
+    .footer {
+      text-align: center;
+      padding: 40px 20px 60px;
+      font-size: 1em;
+      color: #dcd9d8;
+    }
+
+    .footer strong {
+      display: block;
+      margin-top: 10px;
+      color: #a8a6a3;
+    }
+
+    .btnMais{
+        background-color: #5c5351ac;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-size: 18px;
+        border-radius: 20px;
+        
+    }
+
+    .frase{
+        text-align: center;
+        font-style: italic;
+    }
+
+    .titulo_timeline h1{
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #c59d5f;
+    }
+
+    .album-container {
+      position: relative;
+      width: 320px;
+      height: 400px;
+      overflow: hidden;
+      border: 8px solid #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      background-color: #fff;
+      margin: 0.5rem;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      /* padding: 0 10px; */
+      z-index: 7;
+    }
+
+    .buttons button {
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background: #ffccdd;
+    }
+
+
+
+    /* Responsive tweaks */
+    @media screen and (min-width: 600px) {
+      header h1 { font-size: 2.4em; }
+      .event h3 { font-size: 1.4em; }
+    }

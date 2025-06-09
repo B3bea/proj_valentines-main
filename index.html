@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Our Story</title>
+</head>
+<body>
+
+<header>
+  <h1>Olá, meu amor.</h1>
+  <p>Se você chegou até aqui, quer dizer que meu QR Code funcionou💁‍♀️</p> <br>
+  <p>Esse ano quis trazer algo diferente das famigeradas cartinhas. </p> <br>
+
+  <p>Em todos esses anos,  tive momentos incríveis ao seu lado. Eu sempre falo a mesma coisa, e falarei quantas vezes forem necessárias. Encontrar você foi a melhor coisa que me aconteceu. Agradeço sempre a Deus por te ter. Você não sabe o quão importante você é para mim, ou o quão bem e feliz você me faz. Você me motiva a querer ser a minha melhor versão. Obrigada por tanto.</p> <br>
+
+  <p>Já que esse é o nosso 5º dia dos namorados juntos, parei para me lembrar de tudo que já passamos e que ainda quero vivenciar com você. </p> <br>
+
+  <button class="btnMais" onclick="rolar('.timeline')">Clique aqui</button>
+</header>
+
+<section class="timeline">
+
+    <div class="titulo_timeline">
+        <h1>Bem-Vindo à nossa timeline</h1>
+        <p class="frase">"From the moment we met to the dreams we’re building together"</p>
+    </div>
+
+  <div class="album-container">
+    <div class="slide active"><img src="img/foto1.png" alt="Foto 1"></div>
+    <div class="slide"><img src="img/1.png" alt="Foto 2"></div>
+    <div class="slide"><img src="img/2.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/3.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/4.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/5.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/20.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/21.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/6.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/7.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/8.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/9.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/10.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/11.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/12.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/13.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/14.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/15.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/16.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/17.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/18.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/19.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/22.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/23.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/24.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/25.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/26.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/27.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/28.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/29.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/30.png" alt="Foto 3"></div>
+    <div class="slide"><img src="img/31.png" alt="Foto 3"></div>
+
+    <div class="buttons">
+      <button onclick="changeSlide(-1)">‹</button>
+      <button onclick="changeSlide(1)">›</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    Feliz dia dos namorados, coração.<br/>
+    Obrigada por estar escrevendo essa história linda comigo. 
+    <strong>Eu te amo muito!</strong>
+</div>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function changeSlide(direction) {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + direction + slides.length) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }
+
+    // Troca automática (opcional)
+    // setInterval(() => changeSlide(1), 5000);
+  </script>
+
+<script src="script.js"></script>
+</body>
+</html>
